@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #492259;
+    --secondary-color: #6C3483;
+    --background-hover: #E8DAEF;
+    --background-active: #D5DBDB;
+    --border-color: rgba(73, 34, 89, 0.6);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --icon-bg: rgba(164, 78, 166, 0.2);
+    --icon-hover-bg: #D0D9E0;
+    --font-family-primary: 'Quicksand', sans-serif;
+}
+
+/* Header Container */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 30px;
+    border-radius: 10px;
+    background: transparent;
+    position: relative;
+}
+
+/* Pencil Effect Border Line */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: rgba(34, 11, 43, 0.6);
+    box-shadow: 0 0 0 2px rgba(97, 94, 99, 0.3) inset;
+}
+
+/* Title Section */
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    font-family: var(--font-family-primary);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.98rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Active Link Styles */
+.nav-links a.active {
+    background-color: var(--background-hover);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    
+}
+
+.nav-links a:hover {
+    background-color: var(--background-hover);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.nav-links a:active {
+    background-color: var(--background-active);
+    transform: scale(0.95);
+    box-shadow: inset 0 0 5px var(--shadow-color);
+}
+
+.nav-links a:focus {
+    outline: under;
+    border-bottom: 2px solid var(--secondary-color);
+    background-color: var(--background-hover);
+    color: var(--secondary-color);
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 8px 3px -2px black, 0 -4px 3px -4px;
+    transition: background 0.3s, border-color 0.3s;
+    width: 400px;
+    position: relative;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px;
+    flex: 1;
+    border-radius: 20px;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #0A0D0A;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+    background: #D0D9E0;
+    border-color: var(--primary-color);
+}
+
+.search-bar button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Icons Section */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Common Icon Styles */
+.header-icons div {
+    background: var(--icon-bg);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.header-icons div:hover {
+    background: var(--icon-hover-bg);
+    transform: scale(1.05);
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 10px;
+    width: 220px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: block;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #F0F0F0;
+    color: #1a1a1a;
+}
+
+.dropdown-menu p {
+    margin: 5px 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: #fff;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.mobile-menu-open {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    /* Ensure mobile menu toggle button is visible only on mobile */
+    .mobile-menu-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+
+    /* Hide search bar and icons in mobile view */
+    .search-bar, .header-icons {
+        display: none;
+    }
+
+    /* Adjust header title alignment */
+    .header-title {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Adjust icon sizes for mobile */
+    .header-icons div {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop: Hide mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none;
+}

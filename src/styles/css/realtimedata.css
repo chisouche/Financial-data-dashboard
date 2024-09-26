@@ -1,3 +1,7 @@
+
+/* WHOLE SECTION LAYOUT FOR EVERY PART */
+
+
 /* Global styles for body */
 body {
     font-family: Arial, sans-serif; /* Use a clean, readable font */
@@ -24,7 +28,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 20px;
+    padding: 15px;
   }
   
   .summary-section {
@@ -32,20 +36,17 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  
-  .portfolio-snapshot, .financial-health {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-  }
+
   
   .portfolio-snapshot h2, .financial-health h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
   
-  .portfolio-value, .performance-metrics, .asset-allocation, .alerts, .health-score, .improvement-suggestions {
+  .portfolio-value, .asset-allocation, .alerts, .health-score, .improvement-suggestions {
     margin-bottom: 20px;
   }
   
@@ -55,8 +56,9 @@ main {
     margin-top: 5px;
   }
   
-  .performance-metrics div, .improvement-suggestions p {
-    margin-bottom: 10px;
+  .performance-metrics div{
+    display: flex;
+    flex-direction: column;
   }
   
   .chart-placeholder {

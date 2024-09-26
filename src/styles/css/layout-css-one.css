@@ -1,0 +1,186 @@
+
+.Portfolio-Value-layout{
+    border: 1px solid #ddd;
+    grid-column: span 2; 
+    background: linear-gradient(135deg, #1E1E1E, #292929);
+    background-color: #BFCFD9;
+    padding: 20px;
+    border-radius: 15px;
+    color: #bfcfd9;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.Portfolio-Value-layout h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #a44ea6;
+    font-size: 24px;
+}
+
+.value-container{
+    display: flex;
+    flex-direction: column;
+    color: #bfcfd9;
+    border: 1px solid #3F3F3F;
+    border-radius: 8px;
+    padding: 25px;
+    background: #2C2C2C;
+    backdrop-filter: blur(10px);
+}
+
+.total-value-row {
+    display: flex;
+    gap: 400px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #bfcfd9;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.total-value-row span {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #dfdede;
+    font-size: 15px;
+}
+
+.total-value-row i {
+    margin-left: 10px;
+    color: #BFCFD9;
+}
+
+.fas {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.dollar-sign::before {
+    content: "$";
+    color: #ffffff; 
+    font-size: 1.5em; 
+    margin-right: 5px; 
+}
+
+.currency {
+    font-size: 2em;
+    display: flex;
+    align-items: baseline;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 32px;
+    color: #C0C0C0
+}
+
+.dollar-sign {
+    font-size: 1.2em; 
+    color: #fcfcfc; 
+}
+
+.amount {
+    font-size: 1.5em; 
+    color: #ffffff; 
+}
+
+.decimal {
+    font-size: 1.2em; 
+    vertical-align: super; 
+    color: #f7f7f7; 
+}
+
+.performance-metrics{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.transaction-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.performance-metrics div {
+    display: flex;
+    justify-content: space-between;
+    border-right: 2px solid #e9ebec62;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.performance-metrics div:last-child {
+  border-bottom: none; /* Remove line from the last row */
+}
+
+    .performance-metrics span {
+    color: #647330; /* Performance metrics text */
+    font-weight: bold;
+}
+
+.performance-metrics div span:nth-child(2) {
+    color: #A44EA6; /* Color for positive/negative values */
+}
+
+.button-money{
+    margin-left: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.add-money{
+    background-color: #A44EA6;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+}
+
+.btn-money {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    color: #BFCFD9;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-money:hover {
+    background: #4a4a4a;
+    transform: scale(1.05);
+}
+
+.btn-money a {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn-money i {
+font-size: 18px; 
+font-weight: bold; 
+margin-right: 8px; 
+color: #492259; 
+}
+
+.btn-money span {
+font-size: 12px;
+font-weight: bold;
+color: #ffffff; 
+}
+
+/* Hover effect to change background color */
+.btn-money:hover {
+background-color: #BFCFD9;
+}
+
